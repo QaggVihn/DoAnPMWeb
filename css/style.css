@@ -1,0 +1,234 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f9fa;
+    margin: 0;
+    padding: 0;
+}
+
+/* cách dòng cho trang để đẩy footer xuống */
+.giohang{
+    padding-bottom: 35vh;
+}
+.dangnhap-dangky{
+    padding-bottom: 20vh;
+}
+
+
+/* Theme chính*/
+:root {
+    --primary-color: #007bff;
+    --secondary-color: #6c757d;
+    --success-color: #28a745;
+    --danger-color: #dc3545;
+}
+
+
+/* Navbar */
+.navbar {
+    box-shadow: 0 2px 4px rgba(0,0,0,.1);
+}
+.navbar-brand .brand-logo {
+    height: 40px;
+    width: auto;
+}
+
+/* Hero carousel */
+.carousel-item img {
+    height: 500px;
+    object-fit: contain;
+    width: 100%;
+}
+
+/* Search bar */
+.search-form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Categories sidebar */
+.categories {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,.1);
+}
+
+.cat-item {
+    display: block;
+    padding: 10px;
+    color: var(--secondary-color);
+    text-decoration: none;
+    border-bottom: 1px solid #eee;
+}
+
+.cat-item:hover {
+    color: var(--primary-color);
+    background: #f8f9fa;
+}
+
+/* Cards sản phẩm */
+.card {
+    transition: transform 0.3s, box-shadow 0.3s;
+    border: none;
+    box-shadow: 0 2px 10px rgba(0,0,0,.1);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 20px rgba(0,0,0,.15);
+}
+
+/* SỬA GIẬT MODAL: Disable hover mạnh hơn khi modal mở */
+.modal-open .card:hover,
+.no-hover-force:hover {
+    transform: none !important;
+    box-shadow: 0 2px 10px rgba(0,0,0,.1) !important;  
+    transition: none !important;  
+}
+
+.no-hover {
+    transition: none;  
+}
+
+.edit-btn {
+    pointer-events: auto;  
+}
+
+/* Card-img-top */
+.card-img-top {
+    height: 200px;
+    object-fit: cover;
+    object-position: center;
+    width: 100%;
+}
+
+.card-img-top.detail-img {
+    height: 300px;
+}
+
+/* Badge giảm giá */
+.badge-sale {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: var(--success-color);
+    color: white;
+    padding: 5px 10px;
+}
+
+/* Overlay tối cho caption */
+.carousel-caption::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.4);  
+    border-radius: 10px;  
+    z-index: -1;
+}
+
+.carousel-caption {
+    background: none;  
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);  
+}
+
+/* Buttons */
+.btn-primary {
+    background-color: var(--primary-color);
+    border: none;
+    border-radius: 5px;
+}
+
+.btn-primary:hover {
+    background-color: darken(var(--primary-color), 10%);
+}
+
+.btn-success {
+    background-color: var(--success-color);
+    border-radius: 5px;
+}
+
+.btn-danger {
+    background-color: var(--danger-color);
+    border-radius: 5px;
+}
+
+/* Newsletter footer */
+.newsletter {
+    background: transparent;
+    color: white;
+    padding: 40px 0;
+}
+
+.newsletter input {
+    border-radius: 5px 0 0 5px;
+}
+
+.newsletter button {
+    border-radius: 0 5px 5px 0;
+    background: var(--success-color);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .navbar-nav {
+        text-align: center;
+    }
+    .card-img-top {
+        height: 150px;
+    }
+    .carousel-item img {
+        height: 300px;
+    }
+}
+/* =========================================== */
+/* CSS TẠO KHUNG THUMBNAIL HÌNH VUÔNG (1:1) */
+/* =========================================== */
+
+.product-img-box {
+    width: 100%;             
+    padding-top: 100%;       
+    position: relative;      
+    overflow: hidden;        
+}
+
+.product-thumbnail {
+    position: absolute;      
+    top: 0;
+    left: 0;
+    width: 100%;             
+    height: 100%;            
+    object-fit: contain;          
+    transition: transform 0.3s ease; 
+}
+
+/*Loại bỏ border mặc định của Bootstrap cho ảnh nếu có */
+.card-img-top {
+    border-radius: 0;
+    object-fit: contain;
+}
+
+/* quản trị */
+.card-header h2 {
+    margin: 0;
+    color: var(--primary-color);
+}
+
+.modal .form-label {
+    font-weight: bold;
+}
+
+.cat-item.active {
+    background: var(--primary-color);
+    color: white;
+    border-radius: 5px;
+}
+
+/* Alert trong quantri */
+.alert {
+    border-radius: 10px;
+}
